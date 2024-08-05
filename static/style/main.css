@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+}
+
+/*   */
+
+.nav-center {
+    position: relative;
+    right: 50%;
+    left: 50%;
+    transform: translateY(50%);
+
+}
+
+.main-nav {
+    position: sticky;
+}
+
+.size {
+}
+
+section {
+    --col-orange: #ffffff;
+    --col-dark: #0c0f14;
+    --col-darkGray: #52555a;
+    --col-gray: #aeaeae;
+
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--col-dark);
+    border-radius: 30px;
+    transform: translateX(-50%) translateY(85vh);
+}
+.label {
+    padding: 18px 28px;
+    transition: all 200ms;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.label input[type="radio"] {
+    display: none;
+}
+.label > svg {
+    transition: all 200ms;
+    fill: var(--col-gray);
+    width: 25px;
+}
+.label:hover:not(:has(input:checked)) > svg {
+    fill: #3b92c9;
+    opacity: 0.6;
+}
+.label::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    border-radius: 5px;
+    position: relative;
+    left: 50%;
+    top: 30px;
+    background: var(--col-orange);
+    transition: all 200ms;
+}
+.label > svg {
+    transition: 300ms;
+    fill: var(--col-darkGray);
+    margin-top: 0;
+}
+.label:has(input:checked) > svg {
+    fill: var(--col-orange);
+    scale: 1.2;
+    margin-top: -15px;
+}
+
+.label:has(input:checked)::before {
+    width: 100%;
+    left: 0;
+    top: 25px;
+}
+
+.logo_icon {
+    transform: scale(200%);
+}
