@@ -1,6 +1,4 @@
 from flask import Flask, render_template
-from flask_sqlalchemy import SQLAlchemy
-from flask_login import LoginManager
 
 gup = Flask(__name__)
 
@@ -12,4 +10,4 @@ def gup_login():
 
 
 if __name__ == "__main__":
-    gup.run()
+    gup.run(debug=False, host='0.0.0.0')
