@@ -25,21 +25,22 @@ body {
 
 .size {
 }
-
 section {
-    --col-orange: #ffffff;
-    --col-dark: #0c0f14;
-    --col-darkGray: #52555a;
-    --col-gray: #aeaeae;
+    --col-white: #ffffff;
+    --col-bright-sat: #c47e7e;
+    --col-bright: #52555a;
+    --col-dark: #aeaeae;
+    --col-black: #0c0f14;
 
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: var(--col-dark);
+    background-color: var(--col-black);
     border-radius: 30px;
     transform: translateX(-50%) translateY(85vh);
 }
+
 .label {
     padding: 18px 28px;
     transition: all 200ms;
@@ -52,11 +53,11 @@ section {
 }
 .label > svg {
     transition: all 200ms;
-    fill: var(--col-gray);
+    fill: var(--col-bright);
     width: 25px;
 }
 .label:hover:not(:has(input:checked)) > svg {
-    fill: #3b92c9;
+    fill: var(--col-bright-sat);
     opacity: 0.6;
 }
 .label::before {
@@ -68,16 +69,16 @@ section {
     position: relative;
     left: 50%;
     top: 30px;
-    background: var(--col-orange);
+    background: var(--col-white);
     transition: all 200ms;
 }
 .label > svg {
     transition: 300ms;
-    fill: var(--col-darkGray);
+    fill: var(--col-bright );
     margin-top: 0;
 }
 .label:has(input:checked) > svg {
-    fill: var(--col-orange);
+    fill: var(--col-white);
     scale: 1.2;
     margin-top: -15px;
 }
