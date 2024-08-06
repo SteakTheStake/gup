@@ -4,10 +4,57 @@
 
 body {
     font-family: sans-serif;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    overflow: clip;
+    overflow-block: hidden;
+    background-color: #0c0f14;
 
 }
+
+/*   */
+
+.wrapper {
+    animation: scroll 100s linear infinite;
+    background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"),
+    #111111;
+    color: #eee;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+    position: inherit;
+    z-index: -15;
+    overflow: clip;
+    overflow-block: clip;
+    max-height: 1650px;
+    max-width: 800px;
+}
+
+@keyframes scroll {
+    100% {
+        background-position: 0 -400%;
+    }
+}
+
+.title {
+    font-size: 2.5rem;
+}
+
+/* Fallback if the operatring system prefers reduced motion*/
+@media (prefers-reduced-motion) {
+    .wrapper {
+        animation: scroll 800s linear infinite;
+    }
+}
+
+@media (min-width: 670px) {
+    .title {
+        font-size: 5rem;
+    }
+}
+
 
 /*   */
 
@@ -21,6 +68,7 @@ body {
 
 .main-nav {
     position: sticky;
+    transform: translateX(-50%) translateY(85vh);
 }
 
 .size {
@@ -32,13 +80,13 @@ section {
     --col-dark: #aeaeae;
     --col-black: #0c0f14;
 
-    width: 50%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     background-color: var(--col-black);
     border-radius: 30px;
-    transform: translateX(-50%) translateY(85vh);
+    filter: drop-shadow(8px 8px 16px rgba(82, 85, 90, 0.5));
 }
 
 .label {
@@ -46,6 +94,7 @@ section {
     transition: all 200ms;
     display: inline-block;
     cursor: pointer;
+    user-select: none;
 }
 
 .label input[type="radio"] {

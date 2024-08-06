@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Gup | Home</title>
+    <title>Gup | Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" rel="stylesheet">
     <link href="{{ url_for('static', filename='style/main.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='style/login.css') }}" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href={{ url_for('static', filename='img/apple-touch-icon.png') }}>
     <link rel="icon" type="image/png" sizes="32x32" href={{ url_for('static', filename='img/favicon-32x32.png') }}>
     <link rel="icon" type="image/png" sizes="16x16" href={{ url_for('static', filename='img/favicon-16x16.png') }}>
@@ -16,6 +17,11 @@
     <div class="nav-center">
         {% include 'menu/nav.html' %}
     </div>
+</div>
+
+<div class="input-group">
+    <input required="required" type="text" name="text" autocomplete="off" class="input">
+    <label class="user-label">First Name</label>
 </div>
 
 </body>
