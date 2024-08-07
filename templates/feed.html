@@ -2,30 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Gup | Login</title>
+    <title>Gup | Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" rel="stylesheet">
     <link href="{{ url_for('static', filename='style/main.css') }}" rel="stylesheet">
-    <link href="{{ url_for('static', filename='style/login.css') }}" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href={{ url_for('static', filename='img/apple-touch-icon.png') }}>
     <link rel="icon" type="image/png" sizes="32x32" href={{ url_for('static', filename='img/favicon-32x32.png') }}>
     <link rel="icon" type="image/png" sizes="16x16" href={{ url_for('static', filename='img/favicon-16x16.png') }}>
     <link rel="manifest" href={{ url_for('static', filename='img/site.webmanifest') }}>
 </head>
 <body>
-<div class="wrapper"></div>
 <div class="main-nav">
     <div class="nav-center">
         {% include 'menu/nav.html' %}
     </div>
 </div>
-<div class="login-group">
-    <div class="input-group">
-        <input required="required" type="text" name="text" autocomplete="off" class="input">
-        <label class="user-label">First Name</label>
+
+<div style="display: flex; justify-content: center;">
+
+    <div class="reelsContainer">
+        <div class="reel">1</div>
+        <div class="reel">2</div>
+        <div class="reel">3</div>
+        <div class="reel">4</div>
+        <div class="reel">5</div>
+        <div class="reel">6</div>
     </div>
-    <button><a href="{{ url_for('login') }}">Login</a></button>
 </div>
+
 </body>
 <script src="https://kit.fontawesome.com/cd4693caa2.js" crossorigin="anonymous"></script>
 
