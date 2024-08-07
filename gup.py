@@ -1,7 +1,7 @@
 from flask import Flask, render_template, session, redirect, url_for
 
 gup = Flask(__name__)
-gup.secret_key = 'your_secret_key'
+gup.secret_key = '1209082503'
 
 # Session configuration
 gup.config['SESSION_TYPE'] = 'filesystem'

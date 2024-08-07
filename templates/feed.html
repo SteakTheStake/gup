@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href={{ url_for('static', filename='img/favicon-16x16.png') }}>
     <link rel="manifest" href={{ url_for('static', filename='img/site.webmanifest') }}>
 </head>
-<body>
+<body style="overflow: hidden;">
 <div class="main-nav">
     <div class="nav-center">
         {% include 'menu/nav.html' %}
@@ -21,12 +21,12 @@
 <div style="display: flex; justify-content: center;">
 
     <div class="reelsContainer">
-        <div class="reel">1</div>
-        <div class="reel">2</div>
-        <div class="reel">3</div>
-        <div class="reel">4</div>
-        <div class="reel">5</div>
-        <div class="reel">6</div>
+        <div class="reel"><img src="{{ url_for('static', filename='img/android-chrome-512x512.png') }}" alt="GUP Logo!"></div>
+        <div class="reel"><img src="{{ url_for('static', filename='img/android-chrome-512x512.png') }}" alt="GUP Logo!"></div>
+        <div class="reel"><img src="{{ url_for('static', filename='img/android-chrome-512x512.png') }}" alt="GUP Logo!"></div>
+        <div class="reel"><img src="{{ url_for('static', filename='img/android-chrome-512x512.png') }}" alt="GUP Logo!"></div>
+        <div class="reel"><img src="{{ url_for('static', filename='img/android-chrome-512x512.png') }}" alt="GUP Logo!"></div>
+        <div class="reel"><img src="{{ url_for('static', filename='img/android-chrome-512x512.png') }}" alt="GUP Logo!"></div>
     </div>
 </div>
 

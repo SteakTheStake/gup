@@ -4,11 +4,28 @@
 
 body {
     font-family: sans-serif;
-    overflow: clip;
-    overflow-block: hidden;
     background: #0c0f14;
+    overflow: hidden;
+    position: relative;
 
 
+}
+
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    --col-white: #ffffff;
+    --col-bright-sat: #6326ad;
+    --col-bright: #52555a;
+    --col-dark: rgba(123, 0, 255, 0.25);
+    --col-black: #0c0f14;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--col-dark);
 }
 
 /*   */
@@ -17,8 +34,6 @@ body {
     animation: scroll 100s linear infinite;
     background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"),
     #111111;
-    background: -webkit-linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);  /* Chrome 10-25, Safari 5.1-6 */
-    background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #eee;
     height: 100%;
     width: 100%;

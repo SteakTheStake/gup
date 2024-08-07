@@ -1,11 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
 .reelsContainer {
     /* background: pink; */
-
+    position: relative;
+    overflow-y: visible;
     height: 80vh;
     width: 25vw;
     margin-top: 4em;
     display: flex;
-    overflow: auto;
     gap: 2em;
     flex-direction: column;
     scroll-snap-type: y mandatory;
@@ -19,6 +27,8 @@
 .reel  {
     min-height: 75vh;
     min-width: 25vw;
-    background-color: rgba(255, 0, 0, 0.3);
+    height: auto;
+    width: 100%;
+    background-color: rgb(63, 6, 6);
     scroll-snap-align: start;
 }
