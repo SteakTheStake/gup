@@ -4,7 +4,7 @@
 
 .login-group {
     display: block;
-    margin: 15px auto;
+    margin: 80px;
     position: absolute;
     justify-content: center;
     width: 100%;
@@ -48,6 +48,10 @@
 }
 
 button {
+    position: absolute;
+    margin: 20px;
+    top: 90%;
+    right: 50%;
     padding: 1.3em 3em;
     font-size: 12px;
     text-transform: uppercase;

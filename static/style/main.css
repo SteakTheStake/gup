@@ -13,14 +13,17 @@ body {
 
 /* The navigation bar */
 .navbar {
-    overflow: hidden;
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
+    height: 55px;
+    margin-bottom: 15px;
+    margin-left: -8px;
+    margin-right: 0;
     --col-white: #ffffff;
     --col-bright-sat: #6326ad;
     --col-bright: #52555a;
-    --col-dark: rgba(123, 0, 255, 0.25);
+    --col-dark: rgba(99, 38, 173, 0.15);
     --col-black: #0c0f14;
     display: flex;
     align-items: center;
@@ -158,4 +161,18 @@ section {
 
 .logo_icon {
     transform: scale(200%);
+}
+
+.nav-bar-logo-gup {
+    fill: var(--col-white);
+    scale: 1.2;
+    justify-content: left;
+    margin-left: 20px;
+}
+
+.nav-bar-logo-msg {
+    fill: var(--col-white);
+    scale: 1.2;
+    justify-content: right;
+    margin-right: 20px;
 }
