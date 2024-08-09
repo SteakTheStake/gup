@@ -31,5 +31,41 @@ def logout():
     return redirect(url_for('gup_home'))
 
 
+# Route for the feed page
+@gup.route('/feed')
+def feed():
+    if 'logged_in' in session and session['logged_in']:
+        return render_template('feed.html')
+    else:
+        return redirect(url_for('gup_home'))
+
+
+# Route for the post page
+@gup.route('/post')
+def post():
+    if 'logged_in' in session and session['logged_in']:
+        return render_template('post.html')
+    else:
+        return redirect(url_for('gup_home'))
+
+
+# Route for the top comments page
+@gup.route('/top')
+def top():
+    if 'logged_in' in session and session['logged_in']:
+        return render_template('top.html')
+    else:
+        return redirect(url_for('gup_home'))
+
+
+# Route for the profile page
+@gup.route('/profile')
+def profile():
+    if 'logged_in' in session and session['logged_in']:
+        return render_template('profile.html')
+    else:
+        return redirect(url_for('gup_home'))
+
+
 if __name__ == "__main__":
     gup.run(debug=False, host='0.0.0.0')
